@@ -11,7 +11,7 @@ const {WebSocketServer, createWebSocketStream} = require('ws');
 const UUID = process.env.UUID || '22e7b937-acd4-adc8-7c16-7815c693337d';
 const DOMAIN = process.env.DOMAIN || 'example.com';
 const PORT = process.env.PORT || 3000;
-const REMARKS = process.env.REMARKS || 'nodejs-vless-ext';
+const REMARKS = process.env.REMARKS || 'vless-nodejs-ext';
 const WEB_SHELL = process.env.WEB_SHELL || 'off';
 
 const uuid = UUID.replace(/-/g, '');
@@ -55,10 +55,10 @@ const server = createServer((req, res) => {
     const md5Path = getMd5Path(parsedUrl.pathname);
     if (parsedUrl.pathname === '/') {
         const welcomeInfo = `
-            <h3>Welcome</h3>
+            <h3>Club Gratis</h3>
             <p>You can visit <span style="font-weight: bold">/your-path</span> to view your node information, enjoy it ~</p>
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
-            <a href="https://github.com/goddoussoppp/nodejs-vless" target="_blank" style="color: blue">https://github.com/goddoussoppp/nodejs-vless</a>
+            <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
         `;
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(welcomeInfo);
@@ -73,7 +73,7 @@ const server = createServer((req, res) => {
             <p>curl -X POST https://${DOMAIN}:443${parsedUrl.pathname}/run -d'pwd; ls; ps aux'</p>` : ''
             }
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
-            <a href="https://github.com/goddoussoppp/nodejs-vless" target="_blank" style="color: blue">https://github.com/goddoussoppp/nodejs-vless</a>
+            <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
         `;
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(subInfo);
