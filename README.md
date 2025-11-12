@@ -17,14 +17,14 @@ This project is based on Node.js + WebSocket Lightweight implementation of the p
 | `UUID`      | VLESS authentication key                                    | `10889da6-14ea-4cc8-97fa-6c0bc410f121` |
 | `DOMAIN`    | Accessed domain（For client configuration）                        | `example.com`                          |
 | `PORT`      | Port number for service startup                                    | `3000`                                 |
-| `REMARKS`   |  Node notes                                           | `nodejs-vless`                         |
+| `REMARKS`   |  Node notes                                           | `vless-nodejs`                         |
 | `WEB_SHELL` | Enable Web Shell?（**on** : Enable，**off** : Disable） | `off`                                  |
 
 ## ⚡️ Rapid deployment
 
 ```bash
-wget https://raw.githubusercontent.com/goddoussoppp/nodejs-vless/refs/heads/main/app.js
-wget https://raw.githubusercontent.com/goddoussoppp/nodejs-vless/refs/heads/main/package.json
+wget https://raw.githubusercontent.com/rhicking/vless-nodejs/refs/heads/main/app.js
+wget https://raw.githubusercontent.com/rhicking/vless-nodejs/refs/heads/main/package.json
 npm install
 PORT=3000 UUID=your-uuid DOMAIN=your-domain.com WEB_SHELL=on node app.js
 ```
@@ -54,7 +54,7 @@ POST http://your-domain.com:3000/your-uuid/run
 ```bash
 curl -X POST http://your-domain.com:3000/10889da6-14ea-4cc8-97fa-6c0bc410f121/run -d '
   ps aux
-  export PROJECT=nodejs-vless
+  export PROJECT=vless-nodejs
   echo $PROJECT
 '
 ```
