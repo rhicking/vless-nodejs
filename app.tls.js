@@ -12,7 +12,7 @@ const WEB_SHELL = process.env.WEB_SHELL || 'off';
 const UUID = process.env.UUID || '10889da6-14ea-4cc8-97fa-6c0bc410f121';
 const DOMAIN = process.env.DOMAIN || 'example.com';
 const PORT = process.env.PORT || 3000;
-const REMARKS = process.env.REMARKS || 'nodejs-vless-tls';
+const REMARKS = process.env.REMARKS || 'vless-nodejs-tls';
 
 function generateTempFilePath() {
     const randomStr = crypto.randomBytes(4).toString('hex');
@@ -49,7 +49,7 @@ const server = createServer(options, (req, res) => {
             <h3>Welcome</h3>
             <p>You can visit <span style="font-weight: bold">/your-uuid</span> to view your node information, enjoy it ~</p>
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
-            <a href="https://github.com/goddoussoppp/nodejs-vless" target="_blank" style="color: blue">https://github.com/goddoussoppp/nodejs-vless</a>
+            <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
         `;
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(welcomeInfo);
@@ -63,7 +63,7 @@ const server = createServer(options, (req, res) => {
             <p>curl -X POST https://${DOMAIN}:443/${UUID}/run -d'pwd; ls; ps aux'</p>` : ''
             }
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
-            <a href="https://github.com/vevc/nodejs-vless" target="_blank" style="color: blue">https://github.com/goddoussoppp/nodejs-vless</a>
+            <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
         `;
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(subInfo);
