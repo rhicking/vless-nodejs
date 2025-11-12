@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-vless",
+  "name": "vless-nodejs",
   "description": "Lightweight VLESS proxy using Node.js and WebSocket.",
   "version": "1.0.0",
   "main": "app.js",
@@ -13,14 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goddoussoppp/nodejs-vless.git"
+    "url": "git+https://github.com/rhicking/vless-nodejs.git"
   },
   "author": "vevc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/goddoussoppp/nodejs-vless/issues"
+    "url": "https://github.com/rhicking/vless-nodejs/issues"
   },
-  "homepage": "https://github.com/goddoussoppp/nodejs-vless#readme",
+  "homepage": "https://github.com/rhicking/vless-nodejs#readme",
   "dependencies": {
     "ws": "^8.18.2"
   }
