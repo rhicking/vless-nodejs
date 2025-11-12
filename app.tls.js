@@ -46,7 +46,7 @@ const server = createServer(options, (req, res) => {
     const parsedUrl = new URL(req.url, 'http://localhost');
     if (parsedUrl.pathname === '/') {
         const welcomeInfo = `
-            <h3>Welcome</h3>
+            <h3>Club Gratis</h3>
             <p>You can visit <span style="font-weight: bold">/your-uuid</span> to view your node information, enjoy it ~</p>
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
             <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
