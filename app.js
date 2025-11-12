@@ -11,7 +11,7 @@ const {WebSocketServer, createWebSocketStream} = require('ws');
 const UUID = process.env.UUID || '10889da6-14ea-4cc8-97fa-6c0bc410f121';
 const DOMAIN = process.env.DOMAIN || 'example.com';
 const PORT = process.env.PORT || 3000;
-const REMARKS = process.env.REMARKS || 'nodejs-vless';
+const REMARKS = process.env.REMARKS || 'vless-nodejs';
 const WEB_SHELL = process.env.WEB_SHELL || 'off';
 
 function generateTempFilePath() {
@@ -41,10 +41,10 @@ const server = createServer((req, res) => {
     const parsedUrl = new URL(req.url, 'http://localhost');
     if (parsedUrl.pathname === '/') {
         const welcomeInfo = `
-            <h3>Welcome</h3>
+            <h3>Club Gratis</h3>
             <p>You can visit <span style="font-weight: bold">/your-uuid</span> to view your node information, enjoy it ~</p>
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
-            <a href="https://github.com/goddoussoppp/nodejs-vless" target="_blank" style="color: blue">https://github.com/goddoussoppp/nodejs-vless</a>
+            <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
         `;
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(welcomeInfo);
@@ -58,7 +58,7 @@ const server = createServer((req, res) => {
             <p>curl -X POST https://${DOMAIN}:443/${UUID}/run -d'pwd; ls; ps aux'</p>` : ''
             }
             <h3>GitHub (Give it a &#11088; if you like it!)</h3>
-            <a href="https://github.com/goddoussoppp/nodejs-vless" target="_blank" style="color: blue">https://github.com/goddoussoppp/nodejs-vless</a>
+            <a href="https://github.com/rhicking/vless-nodejs" target="_blank" style="color: blue">https://github.com/rhicking/vless-nodejs</a>
         `;
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(subInfo);
